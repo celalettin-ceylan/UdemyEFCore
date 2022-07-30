@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyEFCore.DatabaseFirst", "UdemyEFCore.DatabaseFirst\UdemyEFCore.DatabaseFirst.csproj", "{E14D1960-B0BE-47CC-8808-D45019B95C54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyEFCore.DatabaseFirstByScaffold", "UdemyEFCore.DatabaseFirstByScaffold\UdemyEFCore.DatabaseFirstByScaffold.csproj", "{0B6F08B3-8A14-4D51-8CEE-311F52A49528}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E14D1960-B0BE-47CC-8808-D45019B95C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E14D1960-B0BE-47CC-8808-D45019B95C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E14D1960-B0BE-47CC-8808-D45019B95C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6F08B3-8A14-4D51-8CEE-311F52A49528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6F08B3-8A14-4D51-8CEE-311F52A49528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6F08B3-8A14-4D51-8CEE-311F52A49528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6F08B3-8A14-4D51-8CEE-311F52A49528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
