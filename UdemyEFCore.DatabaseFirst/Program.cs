@@ -3,7 +3,9 @@
 using Microsoft.EntityFrameworkCore;
 using UdemyEFCore.DatabaseFirst.DAL;
 
-using (var _context = new AppDbContext()) {
+DbContenxtInitializer.Build();
+
+using (var _context = new AppDbContext(DbContenxtInitializer.OptionsBuilder.Options)) {
 
     var products = await _context.Products.ToListAsync();
     products.ForEach(p =>
