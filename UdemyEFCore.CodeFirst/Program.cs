@@ -44,3 +44,19 @@ using (var context = new AppDbContext()) {
     //context.SaveChanges();
 
 }
+
+Console.WriteLine(" ");
+Console.WriteLine("Ders 19: DbSet Methods");
+
+using (var context = new AppDbContext())
+{
+    var products = await context.Products.Where(p => p.Id > 10 && p.Name == "Kalem 31").ToListAsync();
+
+    foreach (var product in products) {
+        Console.WriteLine($"{product.Id}: {product.Name}");
+    }
+    
+    var p1 = await context.Products.FirstAsync(p => p.Id == 14); // Ilk karsilasmayi getirir bulamazsa null dondurur.
+    var p2 = await context.Products.SingleAsync(p => p.Id == 14); // Birden Fazla data bulursa geriye exception firlatir.
+    var p3 = await context.Products.FindAsync(14); // primary id ye gore arama yapar linq sorgusu yapmaniza gerek yok.
+}
