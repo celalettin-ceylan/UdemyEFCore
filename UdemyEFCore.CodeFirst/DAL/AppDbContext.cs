@@ -17,4 +17,19 @@ public class AppDbContext : DbContext
         Initializer.Build();
         optionsBuilder.UseSqlServer(Initializer.Configuration.GetConnectionString("SqlCon"));
     }
+
+    public override int SaveChanges()
+    {
+        ChangeTracker.Entries().ToList().ForEach(p => {
+            if (p.Entity is Product product)
+            {
+                if (p.State == EntityState.Added)
+                {
+                    product.CreatedDate = DateTime.Now;
+                    Console.WriteLine($"{product.Id} : {product.Name} - {product.Price} - {product.Stock}");
+                }
+            }
+        });
+        return base.SaveChanges();
+    }
 }
